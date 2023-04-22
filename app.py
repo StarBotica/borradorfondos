@@ -3,6 +3,15 @@ from PIL import Image
 from PIL.ImageFilter import *
 # documentación: https://pillow.readthedocs.io/en/stable/reference/ImageFilter.html
 
+# opcional: convertir imagen a binario para poder descargarla
+# lo devuelto por esta imagen se le colocará al parámetro data de un botón download
+def convertir:
+  from io import BytesIO
+  buf = BytesIO()
+  img.save(buf, format="JPEG")
+  byte_im = buf.getvalue()
+  return byte_im
+
 st.title("Eliminador de fondos")
 
 filtros = ['BLUR','CONTOUR','DETAIL']
@@ -34,4 +43,4 @@ if fichero:
   with col2:
    st.header("Editada")
    st.image(imagen_editada)
-  st.download_button("Descarga tu imagen aquí",imagen_editada,mime="image/png")
+  st.download_button("Descarga tu imagen aquí",data=convertir(imagen_editada),mime="image/png")
