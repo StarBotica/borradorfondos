@@ -26,14 +26,14 @@ if fichero:
   imagen_subida = Image.open(fichero)
   imagen_editada = imagen_subida
   # aplicamos los filtros seleccionados
-  if 'BLUR' in seleccionados:
-    imagen_editada = imagen_editada.filter(BLUR)  
+  if 'BLUR' in seleccionados:    
+    imagen_editada = imagen_editada.filter(ImageFilter.BLUR)
   if 'CONTOUR' in seleccionados:
-    imagen_editada = imagen_editada.filter(CONTOUR)
+    imagen_editada = imagen_editada.filter(ImageFilter.CONTOUR)
   if 'DETAIL' in seleccionados:
-    imagen_editada = imagen_editada.filter(DETAIL)
+    imagen_editada = imagen_editada.filter(ImageFilter.DETAIL)
   if 'SHARPEN' in seleccionados:
-    imagen_editada = imagen_editada.filter(SHARPEN)
+    imagen_editada = imagen_editada.filter(ImageFilter.SHARPEN)
   
     
   # colocamos la imagen original y la editada en dos columnas
