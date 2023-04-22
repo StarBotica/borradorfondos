@@ -34,4 +34,4 @@ if fichero:
   with col2:
    st.header("Editada")
    st.image(imagen_editada)
-  st.download_button("Descarga tu imagen aquí",fichero,mime="image/png")
+  st.download_button("Descarga tu imagen aquí",imagen_editada,mime="image/png")
