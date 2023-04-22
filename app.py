@@ -5,7 +5,7 @@ from PIL.ImageFilter import *
 
 # opcional: convertir imagen a binario para poder descargarla
 # lo devuelto por esta imagen se le colocará al parámetro data de un botón download
-def convertir:
+def convertir(img):
   from io import BytesIO
   buf = BytesIO()
   img.save(buf, format="JPEG")
