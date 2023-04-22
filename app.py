@@ -11,7 +11,7 @@ def convertir(img):
   byte_im = buf.getvalue()
   return byte_im
 
-st.title("Eliminador de fondos")
+st.title("Editor de imágenes")
 
 filtros = ['BLUR','CONTOUR','DETAIL','SHARPEN']
 with st.sidebar:
