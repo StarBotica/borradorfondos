@@ -17,8 +17,6 @@ fichero = st.file_uploader("Elige tu imagen...",type=['png', 'jpg'])
 if fichero:  
   imagen_subida = Image.open(fichero)
   imagen_editada = imagen_subida
-  # mostramos la imagen original
-  st.image(imagen_subida)
   # aplicamos los filtros seleccionados
   if 'BLUR' in seleccionados:
     imagen_editada = imagen_subida.filter(BLUR)
@@ -34,6 +32,6 @@ if fichero:
    st.header("Original")
    st.image(imagen_subida)
   with col2:
-   st.header("Edigada")
+   st.header("Editada")
    st.image(imagen_editada)
   st.download_button("Descarga tu imagen aquí",fichero,mime="image/png")
