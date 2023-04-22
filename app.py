@@ -10,7 +10,7 @@ fichero = st.file_uploader("Elige tu imagen...",type=['png', 'jpg'])
 if fichero:
   
   imagen_subida = Image.open(fichero)
-  st.image(image_subida)
+  st.image(imagen_subida)
   #fixed = remove()
   
   st.download_button("Descarga tu imagen aquí",fichero,mime="image/png")
