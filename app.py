@@ -1,6 +1,5 @@
 import streamlit as st
-from PIL import Image
-from PIL.ImageFilter import *
+from PIL import Image, ImageFilter
 # documentación: https://pillow.readthedocs.io/en/stable/reference/ImageFilter.html
 
 # opcional: convertir imagen a binario para poder descargarla
