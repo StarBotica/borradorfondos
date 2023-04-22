@@ -14,7 +14,7 @@ def convertir(img):
 
 st.title("Eliminador de fondos")
 
-filtros = ['BLUR','CONTOUR','DETAIL']
+filtros = ['BLUR','CONTOUR','DETAIL','SHARPEN']
 with st.sidebar:
   seleccionados = st.multiselect("Elige los filtros que deseas aplicar...",filtros)
 
@@ -33,6 +33,8 @@ if fichero:
     imagen_editada = imagen_subida.filter(CONTOUR)
   if 'DETAIL' in seleccionados:
     imagen_editada = imagen_subida.filter(DETAIL)
+  if 'SHARPEN' in seleccionados:
+    imagen_editada = imagen_subida.filter(SHARPEN)
     
   # colocamos la imagen original y la editada en dos columnas
   col1, col2 = st.columns(2)
