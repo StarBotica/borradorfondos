@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-from rembg import remove
+#from rembg import remove
 
 st.title("Eliminador de fondos")
 
