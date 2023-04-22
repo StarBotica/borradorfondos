@@ -26,5 +26,14 @@ if fichero:
     imagen_editada = imagen_subida.filter(CONTOUR)
   if 'DETAIL' in seleccionados:
     imagen_editada = imagen_subida.filter(DETAIL)
-  st.image(imagen_editada)
+    
+  # colocamos la imagen original y la editada en dos columnas
+  col1, col2 = st.columns(2)
+
+  with col1:
+   st.header("Original")
+   st.image(imagen_subida)
+  with col2:
+   st.header("Edigada")
+   st.image(imagen_editada)
   st.download_button("Descarga tu imagen aquí",fichero,mime="image/png")
