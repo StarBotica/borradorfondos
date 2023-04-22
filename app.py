@@ -14,5 +14,5 @@ if fichero:
   st.image(imagen_subida)
   #fixed = remove()
   imagen_editada = imagen_subida.filter(BLUR)
-  st.image(image_editada)
+  st.image(imagen_editada)
   st.download_button("Descarga tu imagen aquí",fichero,mime="image/png")
