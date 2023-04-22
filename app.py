@@ -16,6 +16,7 @@ fichero = st.file_uploader("Elige tu imagen...",type=['png', 'jpg'])
 
 if fichero:  
   imagen_subida = Image.open(fichero)
+  imagen_editada = imagen_subida
   # mostramos la imagen original
   st.image(imagen_subida)
   # aplicamos los filtros seleccionados
